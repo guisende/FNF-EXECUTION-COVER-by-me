@@ -637,8 +637,12 @@ class TitleState extends MusicBeatState
 				// credTextShit.text += '\nNight';
 				case 15:
 					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
-
 				case 16:
+					addMoreText('Execution cover'); // credTextShit.text += '\nFunkin';
+				case 17:
+					addMoreText('lmao'); // credTextShit.text += '\nFunkin';
+
+				case 18:
 					skipIntro();
 			}
 		}
@@ -671,7 +675,7 @@ class TitleState extends MusicBeatState
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.WHITE, 2);
+						FlxG.camera.flash(FlxColor.RED, 2);
 						skippedIntro = true;
 						playJingle = false;
 						
@@ -687,7 +691,7 @@ class TitleState extends MusicBeatState
 					{
 						remove(ngSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.WHITE, 0.6);
+						FlxG.camera.flash(FlxColor.RED, 0.6);
 						transitioning = false;
 					});
 				}
@@ -695,7 +699,7 @@ class TitleState extends MusicBeatState
 				{
 					remove(ngSpr);
 					remove(credGroup);
-					FlxG.camera.flash(FlxColor.WHITE, 3);
+					FlxG.camera.flash(FlxColor.RED, 3);
 					sound.onComplete = function() {
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
